@@ -1,0 +1,9 @@
+---
+- name: Test
+  hosts: all
+  remote_user: ansible
+  vars_files:
+    - "{{use}}/group_vars/all/main.yml"
+  tasks:
+  - name: Environment?
+    debug: msg="{{env}}"

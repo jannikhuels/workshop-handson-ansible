@@ -1,0 +1,7 @@
+- hosts: all
+  tasks:
+  - name: Erstelle einen Container
+    docker_container:
+      name: webserver
+      image: httpd:2.4
+      state: absent
