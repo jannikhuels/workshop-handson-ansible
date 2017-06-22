@@ -18,6 +18,8 @@ nyc
 
 [ffm:vars]
 region=deutschland
+text=ffm
 
 [nyc:vars]
 region=amerika
+text=nyc

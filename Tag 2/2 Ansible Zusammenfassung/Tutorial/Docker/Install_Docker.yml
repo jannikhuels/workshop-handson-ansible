@@ -3,6 +3,7 @@
   vars:
     pip_install_packages:
       - name: docker
+      - name: docker-py
 
   roles:
     - geerlingguy.pip

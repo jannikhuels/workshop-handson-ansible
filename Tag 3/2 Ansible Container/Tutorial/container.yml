@@ -3,7 +3,7 @@ settings:
   # The Conductor container does the heavy lifting, and provides a portable
   # Python runtime for building your target containers. It should be derived
   # from the same distribution as you're building your target containers with.
-  conductor_base: ubuntu:16.04
+  conductor_base: debian
 
   # The deployment_output_path is mounted to the Conductor container, and the
   # `run` and `deployment` commands then write generated Ansible playbooks to it.
@@ -44,7 +44,7 @@ services:
   # You may need to run `docker pull ubuntu:trusty` for this to work.
 
     web:
-     from: "ubuntu:16.04"
+     from: "debian"
      ports:
        - "80:80"
 

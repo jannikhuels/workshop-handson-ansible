@@ -4,4 +4,9 @@
     docker_container:
       name: webserver
       image: httpd:2.4
-      state: absent
+      state: started
+      ports:
+      - "80:80"
+    register: c_result
+
+  - debug: msg="{{c_result}}"

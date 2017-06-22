@@ -1,16 +1,6 @@
 ---
-- name: Basis Setup
-  hosts: webserver
-  become: true
-  tasks:
-  - name: Installiere ntp
-    apt: name=ntp state=present
-
-  - name: Starte und Enable ntpd
-    service: name=ntp state=started enabled=true
-
 - name: Installiere apache2
-  hosts: webservers
+  hosts: web
   remote_user: ansible
   become: true
   tasks:
@@ -22,12 +12,3 @@
 
   - name: Setze neue index.html
     copy: src=index.html dest=/var/www/html/index.html
-    notify:
-    - apache2 Neustart
-
-  - name: Starte apache2
-    service: name=apache2 state=started enabled=yes
-
-  handlers:
-  - name: apache2 Neustart
-    service: name=apache2 state=restarted

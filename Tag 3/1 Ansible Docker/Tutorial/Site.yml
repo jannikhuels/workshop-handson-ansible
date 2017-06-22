@@ -1,0 +1,5 @@
+- hosts: all
+  roles:
+    - {role: apache2, version: "latest", name: "ffm"}
+    - {role: apache2, version: "latest", name: "nyc"}
+    - {role: haproxy, version: "latest", config_path: "/Users/jannikhuels/Desktop"}
