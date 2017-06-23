@@ -1,4 +1,0 @@
-- block:
-  - include: create.yml
-  - include: destroy.yml
-  tags: haproxy

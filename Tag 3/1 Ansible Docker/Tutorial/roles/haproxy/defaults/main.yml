@@ -1,4 +1,0 @@
-haproxy_app_name: mywebapp
-haproxy_mode: http
-haproxy_algorithm: roundrobin
-config_path: path
