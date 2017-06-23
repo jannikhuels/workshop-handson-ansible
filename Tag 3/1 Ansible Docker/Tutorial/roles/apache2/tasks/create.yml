@@ -27,4 +27,6 @@
   - name: Füge Container-Daten zur leeren Webservers-List hinzu
     set_fact: webservers="[{{ container }}]"
     when: webservers is undefined
+
+  - debug: msg="{{webservers}}"
   tags: create
